@@ -1,8 +1,16 @@
-# DevBox-Base
+# DevBox-Python
 *With Docker or Virtualbox as provider and Ansible provisioning*
 
 A Vagrant box (Virtualbox or Docker as providers and Ansible provisioning)
-base image, to use as template for setting up specialized development environments.
+with a vim-based development environment for python.
+
+## Ingredients
+
+- [python](http://python.org)
+- [pyenv](http://github.com/yyuu/pyenv)
+- vim
+- jedi-vim
+- ...
 
 ## Prerequisites
 
@@ -41,8 +49,8 @@ base image, to use as template for setting up specialized development environmen
 #### Clone the github repository:
 
 ```bash
-git clone git@github.com:samuell/devbox-base
-cd devbox-base
+git clone git@github.com:samuell/devbox-python
+cd devbox-python
 ```
 
 #### Bring up the VM
