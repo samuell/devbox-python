@@ -1,0 +1,16 @@
+---
+- name: Install needed apt packages for pyenv
+  sudo: true
+  apt:
+    name={{ item }}
+    state=installed
+  with_items:
+    - zlib1g-dev
+    - libreadline-dev
+    - libbz2-dev
+    - libsqlite3-dev
+    - libssl-dev
+- name: Install pyenv (via pyenv-installer)
+  shell:
+    curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+    creates={{ home }}/.pyenv
