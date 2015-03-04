@@ -21,6 +21,7 @@
          - gdb
          - cgdb
          - bash-completion # Not included in the docker image
+         - make
   roles:
       - { role: dotfiles, sudo: false }
       - { role: python, sudo: false }
