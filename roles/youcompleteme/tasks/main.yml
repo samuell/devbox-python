@@ -1,0 +1,23 @@
+---
+- name: Install apt packages for YouCompleteMe vim completion engine
+  sudo: yes
+  apt:
+    name={{ item }} state=latest
+  with_items:
+    - build-essential
+    - cmake
+    - python-dev
+- name: Check out YouCompleteMe
+  git:
+    repo=https://github.com/Valloric/YouCompleteMe.git
+    dest={{ home }}/src/YouCompleteMe
+- name: Symlink YouCompleteMe to ~/vim/bundle
+  file:
+    src={{ home }}/src/YouCompleteMe
+    dest={{ home }}/.vim/bundle/YouCompleteMe
+    state=link
+- name: Compile YouCompleteMe binaries
+  command: ./install.sh --clang-completer
+    chdir={{ home }}/src/YouCompleteMe
+    creates={{ home }}/src/YouCompleteMe/python/ycm/youcompleteme.pyc
+
