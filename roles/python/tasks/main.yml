@@ -21,5 +21,13 @@
     dest={{ home }}/.bashrc_mods
   with_items:
     - "export PYENV_ROOT=$HOME/.pyenv"
+    - "export PYENV_SHELL=bash"
     - "export PATH=$PYENV_ROOT/bin:$PATH"
     - "eval \"$(pyenv init -)\""
+- name: Install Python {{ python_version }}
+  shell:
+      pyenv install {{ python_version }}
+  environment:
+    PYENV_ROOT: "{{ home }}/.pyenv"
+    PYENV_SHELL: "bash"
+    PATH: "{{ home }}/.pyenv/bin:$PATH:/usr/bin:/bin:$PATH"
