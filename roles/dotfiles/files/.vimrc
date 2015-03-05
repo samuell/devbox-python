@@ -39,6 +39,6 @@ nmap <c-l> 4l
 " --------------------------------------------
 " Pathogen setup
 " --------------------------------------------
-execute pathogen#infect('')
+execute pathogen#infect('bundle/{}')
 execute pathogen#infect('bundle-last/{}')
 filetype plugin indent on
