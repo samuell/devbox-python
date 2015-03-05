@@ -8,9 +8,9 @@ with a vim-based development environment for python.
 
 - [python](http://python.org)
 - [pyenv](http://github.com/yyuu/pyenv)
-- vim
-- jedi-vim
-- ...
+- [vim](http://www.vim.org)
+- [jedi-vim](https://github.com/davidhalter/jedi-vim)
+- [vim-pyenv](https://github.com/lambdalisue/vim-pyenv)
 
 ## Prerequisites
 
