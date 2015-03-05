@@ -4,6 +4,7 @@
     repo=https://github.com/davidhalter/jedi-vim.git
     dest={{ home }}/.vim/bundle/jedi-vim
     version=HEAD
+    update=yes
 - name: Create folder ~/.vim/bundle-last
   file:
     dest={{ home }}/.vim/bundle-last
