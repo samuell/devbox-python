@@ -40,3 +40,13 @@
     PYENV_ROOT: "{{ home }}/.pyenv"
     PYENV_SHELL: "bash"
     PATH: "{{ home }}/.pyenv/bin:$PATH:/usr/bin:/bin:$PATH"
+- name: Install some useful python packages via pip
+  pip:
+    name={{ item }}
+  with_items:
+    - nose
+    - tdaemon
+  environment:
+    PYENV_ROOT: "{{ home }}/.pyenv"
+    PYENV_SHELL: "bash"
+    PATH: "{{ home }}/.pyenv/shims:{{ home }}/.pyenv/bin:$PATH:/usr/bin:/bin:$PATH"
