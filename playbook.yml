@@ -24,6 +24,7 @@
          - make
          - tree
          - htop
+         - tmux
   roles:
       - { role: dotfiles, sudo: false }
       - { role: python, sudo: false }
