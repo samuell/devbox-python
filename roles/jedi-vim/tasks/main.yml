@@ -1,0 +1,15 @@
+---
+- name: Install jedi-vim vim plugin (via pathogen)
+  git:
+    repo=https://github.com/davidhalter/jedi-vim.git
+    dest={{ home }}/.vim/bundle/jedi-vim
+    version=HEAD
+- name: Create folder ~/.vim/bundle-last
+  file:
+    dest={{ home }}/.vim/bundle-last
+    state=directory
+- name: Install vim-pyenv vim plugin (via pathogen)
+  git:
+    repo=https://github.com/lambdalisue/vim-pyenv.git
+    dest={{ home }}/.vim/bundle-last/vim-pyenv
+
