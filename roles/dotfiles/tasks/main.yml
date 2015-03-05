@@ -21,6 +21,10 @@
       src=/home/vagrant/src/vim-pathogen/autoload/pathogen.vim
       dest=/home/vagrant/.vim/autoload/pathogen.vim
       state=link
+- name: Create bundle-after folder for pathogen plugins needed to load last
+  file:
+      dest={{ home }}/.vim/bundle-after
+      state=directory
 - name: Create empty .bash_aliases_local file
   shell:
       echo '# Add local aliases here' > /home/vagrant/.bash_aliases_local
