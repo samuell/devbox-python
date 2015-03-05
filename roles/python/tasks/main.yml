@@ -26,7 +26,16 @@
     - "eval \"$(pyenv init -)\""
 - name: Install Python {{ python_version }}
   shell:
-      pyenv install {{ python_version }}
+    pyenv install {{ python_version }}
+    creates={{ home }}/.pyenv/versions/{{ python_version }}
+  environment:
+    PYENV_ROOT: "{{ home }}/.pyenv"
+    PYENV_SHELL: "bash"
+    PATH: "{{ home }}/.pyenv/bin:$PATH:/usr/bin:/bin:$PATH"
+- name: Set python {{ python_version }} as global version
+  shell:
+    pyenv global {{ python_version }}
+    creates={{ home }}/.pyenv/version
   environment:
     PYENV_ROOT: "{{ home }}/.pyenv"
     PYENV_SHELL: "bash"

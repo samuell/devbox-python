@@ -20,3 +20,7 @@ export GOROOT=/home/vagrant/opt/go
 export GOPATH=/home/vagrant/code/go
 export PATH=/home/vagrant/opt/go/bin:$PATH
 export PATH=/home/vagrant/code/go/bin:$PATH
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+export PYENV_SHELL=bash
