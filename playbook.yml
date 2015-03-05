@@ -28,4 +28,5 @@
       - { role: dotfiles, sudo: false }
       - { role: python, sudo: false }
       - { role: jedi-vim, sudo: false }
+      - { role: luigi, sudo: fasle }
       #- { role: youcompleteme, sudo: false } # Comment out this to save time!!

@@ -1,0 +1,12 @@
+---
+- name: Install luigi via pip
+  pip:
+    name={{ item }}
+  with_items:
+    - luigi
+    - tornado
+  environment:
+    PYENV_ROOT: "{{ home }}/.pyenv"
+    PYENV_SHELL: "bash"
+    PATH: "{{ home }}/.pyenv/shims:{{ home }}/.pyenv/bin:$PATH:/usr/bin:/bin:$PATH"
+
