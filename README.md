@@ -4,6 +4,8 @@
 A Vagrant box (Virtualbox or Docker as providers and Ansible provisioning)
 with a vim-based development environment for python.
 
+### Note: There are currently problems with the docker version of the script, so please use the virtualbox version until this is solved!
+
 ## Ingredients
 
 - [python](http://python.org)
